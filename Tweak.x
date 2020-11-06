@@ -1,15 +1,11 @@
-#import <AudioToolbox/AudioToolbox.h>
+#include "Tweak.h"
 
-%hook SBVolumeHardwareButton
+%hook NCNotificationDispatcher
 
--(void)volumeIncreasePress:(id)arg1  { 
-    %log; 
-    %orig; 
-}
--(void)volumeDecreasePress:(id)arg1  { 
-NSLog(@"garrepi strife This is it: %@", @"This is my string text!");
-AudioServicesPlaySystemSound(103);
-    %log;
+-(void)postNotificationWithRequest:(NCNotificationRequest*)arg1 {
+    NSLog(@"[strife]: %@", arg1);
+    NSLog(@"[strife] title: %@", [[arg1 content] title]);
+    NSLog(@"[strife] message: %@", [[arg1 content] message]);
     %orig;
- }
+}
 %end

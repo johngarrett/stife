@@ -12,4 +12,12 @@
 `UNNotificationContent`
 > contains every field for a notification (`date`, `_body`, `_title`...))
 
+`BulletinBoard`
+> handles all notifications
 
+`BBServer.h`
+> i think i need to hook this to grab all notifications
+
+`SBBannerController`
+> the view of all banners ?
+ - `[[%c(SBBannerController) sharedInstance] dismissBannerWithAnimation:YES reason:0 forceEvenIfBusy:YES];`

@@ -7,6 +7,7 @@
   /Users/garrepi/theos/vendor/include/theos/IOSMacros.h \
   /Users/garrepi/theos/vendor/include/HBLog.h \
   /Users/garrepi/theos/vendor/include/CoreFoundation/CFLogUtilities.h \
+  /Users/garrepi/dev/stife/Tweak.h \
   /Users/garrepi/theos/vendor/include/substrate.h
 
 /Users/garrepi/theos/Prefix.pch:
@@ -22,5 +23,7 @@
 /Users/garrepi/theos/vendor/include/HBLog.h:
 
 /Users/garrepi/theos/vendor/include/CoreFoundation/CFLogUtilities.h:
+
+/Users/garrepi/dev/stife/Tweak.h:
 
 /Users/garrepi/theos/vendor/include/substrate.h:

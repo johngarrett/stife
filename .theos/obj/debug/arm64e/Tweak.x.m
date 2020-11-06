@@ -1,5 +1,5 @@
 #line 1 "Tweak.x"
-#import <AudioToolbox/AudioToolbox.h>
+#include "Tweak.h"
 
 
 #include <substrate.h>
@@ -22,23 +22,20 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class SBVolumeHardwareButton; 
-static void (*_logos_orig$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$)(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST, SEL, id); static void _logos_method$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST, SEL, id); static void (*_logos_orig$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$)(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST, SEL, id); static void _logos_method$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST, SEL, id); 
+@class NCNotificationDispatcher; 
+static void (*_logos_orig$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$)(_LOGOS_SELF_TYPE_NORMAL NCNotificationDispatcher* _LOGOS_SELF_CONST, SEL, NCNotificationRequest*); static void _logos_method$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$(_LOGOS_SELF_TYPE_NORMAL NCNotificationDispatcher* _LOGOS_SELF_CONST, SEL, NCNotificationRequest*); 
 
 #line 3 "Tweak.x"
 
 
-static void _logos_method$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1)  { 
-    NSLog(@"-[<SBVolumeHardwareButton: %p> volumeIncreasePress:%@]", self, arg1); 
-    _logos_orig$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$(self, _cmd, arg1); 
+
+static void _logos_method$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$(_LOGOS_SELF_TYPE_NORMAL NCNotificationDispatcher* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, NCNotificationRequest* arg1) {
+    NSLog(@"[strife]: %@", arg1);
+    NSLog(@"[strife] title: %@", [[arg1 content] title]);
+    NSLog(@"[strife] message: %@", [[arg1 content] message]);
+    _logos_orig$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$(self, _cmd, arg1);
 }
-static void _logos_method$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$(_LOGOS_SELF_TYPE_NORMAL SBVolumeHardwareButton* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1)  { 
-NSLog(@"garrepi strife This is it: %@", @"This is my string text!");
-AudioServicesPlaySystemSound(103);
-    NSLog(@"-[<SBVolumeHardwareButton: %p> volumeDecreasePress:%@]", self, arg1);
-    _logos_orig$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$(self, _cmd, arg1);
- }
 
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$SBVolumeHardwareButton = objc_getClass("SBVolumeHardwareButton"); { MSHookMessageEx(_logos_class$_ungrouped$SBVolumeHardwareButton, @selector(volumeIncreasePress:), (IMP)&_logos_method$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$, (IMP*)&_logos_orig$_ungrouped$SBVolumeHardwareButton$volumeIncreasePress$);}{ MSHookMessageEx(_logos_class$_ungrouped$SBVolumeHardwareButton, @selector(volumeDecreasePress:), (IMP)&_logos_method$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$, (IMP*)&_logos_orig$_ungrouped$SBVolumeHardwareButton$volumeDecreasePress$);}} }
-#line 16 "Tweak.x"
+{Class _logos_class$_ungrouped$NCNotificationDispatcher = objc_getClass("NCNotificationDispatcher"); { MSHookMessageEx(_logos_class$_ungrouped$NCNotificationDispatcher, @selector(postNotificationWithRequest:), (IMP)&_logos_method$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$, (IMP*)&_logos_orig$_ungrouped$NCNotificationDispatcher$postNotificationWithRequest$);}} }
+#line 13 "Tweak.x"

@@ -1,5 +1,5 @@
-/Users/garrepi/dev/stife/.theos/obj/debug/arm64e/Tweak.x.358ac540.o: \
-  /Users/garrepi/dev/stife/.theos/obj/debug/arm64e/Tweak.x.m \
+/Users/garrepi/dev/stife/.theos/obj/debug/armv7/Tweak.x.d8149d75.o: \
+  /Users/garrepi/dev/stife/.theos/obj/debug/armv7/Tweak.x.m \
   /Users/garrepi/theos/Prefix.pch \
   /Users/garrepi/theos/vendor/include/theos/BackwardsCompat.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
