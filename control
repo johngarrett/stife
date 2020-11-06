@@ -1,0 +1,9 @@
+Package: com.garrepi.stife
+Name: stife
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Supress certain lockscreen notifications.
+Maintainer: garrepi
+Author: garrepi
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)

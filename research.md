@@ -7,3 +7,9 @@
 - [lockscreen tweaks](https://github.com/viggou/Kage)
 - [cask 2, swift tweak](https://github.com/ryannair05/Cask-2)
 
+## dev
+
+`UNNotificationContent`
+> contains every field for a notification (`date`, `_body`, `_title`...))
+
+
