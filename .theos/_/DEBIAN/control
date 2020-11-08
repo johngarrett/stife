@@ -6,5 +6,5 @@ Maintainer: garrepi
 Author: garrepi
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
-Version: 0.0.1-26+debug
-Installed-Size: 216
+Version: 0.0.1-48+debug
+Installed-Size: 220

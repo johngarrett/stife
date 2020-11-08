@@ -7,4 +7,3 @@
 - (NSString *)sectionIdentifier;
 - (NCNotificationContent *)content;
 @end
-
